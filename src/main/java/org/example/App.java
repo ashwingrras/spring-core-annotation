@@ -17,6 +17,8 @@ public class App
 
         Student s1 = context.getBean(Student.class);
         Student s2 = context.getBean(Student.class);
+        System.out.println("student 1 mobile no "+s1.getMobileNo());
+        System.out.println("student 2 mobile no "+s2.getMobileNo());
 
         System.out.println(s1);
         System.out.println(s2);

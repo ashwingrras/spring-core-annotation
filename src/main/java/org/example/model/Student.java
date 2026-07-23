@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+// bean: student
 @Component
 //@Scope("prototype")
 public class Student
@@ -13,7 +14,7 @@ public class Student
 
 
     @Value("chirag")
-    String name;
+    String name; //= "chirag";
 
     @Value("${student.mobileNo}")
     String mobileNo;
