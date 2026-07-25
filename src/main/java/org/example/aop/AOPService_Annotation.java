@@ -1,12 +1,11 @@
 package org.example.aop;
 
 import org.springframework.stereotype.Service;
-// path: org.example.aop.AOPService
-@Service
-public class AOPService
-{
 
-    // want aop
+@Service
+public class AOPService_Annotation
+{
+    @TestCustomAnnotation
     public String performAction()
     {
         System.out.println("inside performAction method ***********");
@@ -15,7 +14,7 @@ public class AOPService
             throw  new RuntimeException("this is custom created");
         }
         System.out.println("after if");
-        return "JAVA FULLSTACK";
+        return "CUSTOM ANNOTATION";
     }
 
     // don't want aop
@@ -29,17 +28,4 @@ public class AOPService
         System.out.println("after if");
         return "JAVA FULLSTACK";
     }
-
-    // want aop
-    public String performAction3()
-    {
-        System.out.println("inside performAction method ***********");
-        if(false)
-        {
-            throw  new RuntimeException("this is custom created");
-        }
-        System.out.println("after if");
-        return "JAVA FULLSTACK";
-    }
-
 }
