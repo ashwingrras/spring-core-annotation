@@ -6,6 +6,33 @@ import org.example.aop.AOPService_Annotation;
 import org.example.config.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+
+/*
+    @Around("@annotation(org.example.aop.Loggable)")
+    public Object aroundAdvice(ProceedingJoinPoint joinPoint) throws Throwable {
+
+        String methodName = joinPoint.getSignature().getName();
+        System.out.println("[Around] Before method: " + methodName);
+
+        long start = System.currentTimeMillis();
+
+        Object result = null;
+        try {
+            result = joinPoint.proceed(); // execute target method
+        } catch (Exception ex) {
+            System.out.println("[Around] Exception in method: " + methodName);
+            throw ex;
+        }
+
+        long end = System.currentTimeMillis();
+
+        System.out.println("[Around] After method: " + methodName);
+        System.out.println("[Around] Execution time: " + (end - start) + " ms");
+
+        return result;
+    }
+    */
+
 /*
         AOP : aspect oriented programming
 
